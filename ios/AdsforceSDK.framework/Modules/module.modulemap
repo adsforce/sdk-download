@@ -1,0 +1,6 @@
+framework module AdsforceSDK {
+  umbrella header "AdsforceSDK.h"
+
+  export *
+  module * { export * }
+}
