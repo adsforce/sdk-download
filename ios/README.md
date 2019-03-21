@@ -62,7 +62,7 @@ Parameters are as follows:
 - `productCurrencyCode` such as `CNY`
 - `pubkey` such as `48a07332496a4bcb9eea4d32e1234582`
 
-## Third Pay
+## Third Pay Log Report
 
 After initializating,  you should use this method to upload IAP information after Third Pay process.
 
@@ -72,7 +72,7 @@ NSString *productCurrencyCode = @"your product currency code";
 NSString *productIdentifier = @"your product id";
 NSString *productCategory = @"your product category";
 
-[AdsforceSDK thirdPayWithProductPrice:productPrice productCurrencyCode:productCurrencyCode productIdentifier:productIdentifier productCategory:productCategory];
+[AdsforceSDK thirdZFLogReportWithProductPrice:productPrice productCurrencyCode:productCurrencyCode productIdentifier:productIdentifier productCategory:productCategory];
 ```
 
 Parameters are as follows:

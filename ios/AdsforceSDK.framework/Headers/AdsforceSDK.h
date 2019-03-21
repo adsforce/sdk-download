@@ -32,7 +32,7 @@
                           pubkey:(NSString *)pubkey
                           params:(NSDictionary *)params;
 
-+ (void)thirdPayWithProductPrice:(NSNumber *)productPrice
++ (void)thirdZFLogReportWithProductPrice:(NSNumber *)productPrice
              productCurrencyCode:(NSString *)productCurrencyCode
                productIdentifier:(NSString *)productIdentifier
                  productCategory:(NSString *)productCategory;
