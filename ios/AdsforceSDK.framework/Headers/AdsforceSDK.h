@@ -33,9 +33,9 @@
                           params:(NSDictionary *)params;
 
 + (void)thirdZFLogReportWithProductPrice:(NSNumber *)productPrice
-             productCurrencyCode:(NSString *)productCurrencyCode
-               productIdentifier:(NSString *)productIdentifier
-                 productCategory:(NSString *)productCategory;
+                     productCurrencyCode:(NSString *)productCurrencyCode
+                       productIdentifier:(NSString *)productIdentifier
+                         productCategory:(NSString *)productCategory;
 
 #pragma mark - CustomEvent
 
@@ -52,5 +52,9 @@
 + (void)enableDnsMode:(BOOL)enable;
 
 + (void)setDnsMappingServers:(NSArray <NSString *> *)dnsMappingServers host:(NSString *)host;
+
+#pragma mark - CustomId
+
++ (void)setCustomId:(NSString *)cuid;
 
 @end
