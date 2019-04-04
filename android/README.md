@@ -120,7 +120,7 @@ AdsforceSdk.thirdZFReportWithProductPrice(@NonNull String price, @NonNull String
 ## Custom event report
 
 You can report the custom events that occur in the application. 
-<!--
+
 If you want to report custom event, you should open the custom event report controller firstly.
 
 > Note: Default custom event report controller is disable.
@@ -134,7 +134,6 @@ Or maybe you don't need to reprot custom event, you can disable the custom repor
 ```java
 AdsforceSdk.enableCustomerEvent(false);
 ```
--->
 
 Depending on the type of the reported parameters, you can select one of the following three methods for reporting.
 
