@@ -79,3 +79,28 @@ Parameters are as follows:
 
 - `productPrice` such as `6.00`
 - `productCurrencyCode `such as `CNY`
+
+## Custom event report
+
+You can report the custom events that occur in the application. 
+
+If you want to report custom event, you should open the custom event report controller firstly.
+
+> Note: Default custom event report controller is disable.
+
+```objective-c
++ (void)enableCustomerEvent:(BOOL)enable;
+```
+
+Depending on the type of the reported parameters, you can select one of the following three methods for reporting.
+
+```objective-c
++ (void)customEventWithKey:(NSString *)key stringValue:(NSString *)value;
+
++ (void)customEventWithKey:(NSString *)key arrayValue:(NSArray<NSString *> *)value;
+
++ (void)customEventWithKey:(NSString *)key dictionaryValue:(NSDictionary<NSString *,NSString *> *)value;
+```
+
+> Note: Please call this method must be called after initializing the SDK.
+
