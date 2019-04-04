@@ -90,6 +90,21 @@ If the in-app purchase uses the third-party payment, you can call the following 
 
 ## 5. Tracking In-App Events
 You can report the custom events that occur in the application.
+<!--
+If you want to report custom event, you should open the custom event report controller firstly.
+
+> Note: Default custom event report controller is disable.
+
+```java
+AdsforceApi.enableCustomerEvent(true);
+```
+
+Or maybe you don't need to reprot custom event, you can disable the custom reporter.
+
+```java
+AdsforceApi.enableCustomerEvent(false);
+```
+-->
 
 Depending on the type of the reported parameters, you can select one of the following three methods for reporting.
 
@@ -100,7 +115,7 @@ Depending on the type of the reported parameters, you can select one of the foll
  * @param key   Key of event
  * @param value Data for reproting
  */
-AdsforceSdk.customerEventWithValue(string key, string value);
+AdsforceApi.customerEventWithValue(string key, string value);
 
 /**
  * Custom event report
@@ -108,7 +123,7 @@ AdsforceSdk.customerEventWithValue(string key, string value);
  * @param key  Key of event
  * @param list Use Arraylist for reproting
  */
-AdsforceSdk.customerEventWithList(string key, List<string> list);
+AdsforceApi.customerEventWithList(string key, List<string> list);
 
 /**
  * Custom event report
@@ -116,7 +131,7 @@ AdsforceSdk.customerEventWithList(string key, List<string> list);
  * @param key Key of event
  * @param map Use HashMap for reproting
  */
-AdsforceSdk.customerEventWithMap(string key, Dictionary<string, string> dic);
+AdsforceApi.customerEventWithMap(string key, Dictionary<string, string> dic);
 ```
 
 ## 6. Tracking Deep Linking
@@ -129,5 +144,5 @@ AdsforceApi.getDeepLink (callback);
 ## 7. Set AndroidId(only for android)
 In order to ensure the accuracy of the data , Please ensure that the privacy of the user will not be revealed and call the following method to pass the AndroidId to us.
 ```
-AdsforceSdk.setAndroidId(string AndroidId);
+AdsforceApi.setAndroidId(string AndroidId);
 ```
