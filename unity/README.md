@@ -53,7 +53,7 @@ If the in-app purchase uses the google payment, you can call the following metho
  * @param map            Other map, can be empty
  */
 
- AdsforceApi.googlePayWithProductPrice(string price, string currency, string publicKey, string dataSignature, string purchaseData, Dictionary<string, string> map)
+ AdsforceApi.googleZFReportWithProductPrice(string price, string currency, string publicKey, string dataSignature, string purchaseData, Dictionary<string, string> map)
 ```
 
 ### 4.2 About IAP for iOS
@@ -85,7 +85,7 @@ If the in-app purchase uses the third-party payment, you can call the following 
  * @param productType  Type of product，recommended to take from the 'type' field of skudetail，can not be empty
  */
 
- AdsforceApi.thirdPayWithProductPrice(string price, string currency, string productId, string productType)
+ AdsforceApi.thirdZFReportWithProductPrice(string price, string currency, string productId, string productType)
 ```
 
 ## 5. Tracking In-App Events
@@ -145,4 +145,5 @@ AdsforceApi.getDeepLink (callback);
 In order to ensure the accuracy of the data , Please ensure that the privacy of the user will not be revealed and call the following method to pass the AndroidId to us.
 ```
 AdsforceApi.setAndroidId(string AndroidId);
+
 ```

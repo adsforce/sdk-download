@@ -6,4 +6,4 @@
 //  Copyright © 2018 Adsforce. All rights reserved.
 //
 
-#define AdsforceSDK_VERSION @"1103"
+#define AdsforceSDK_VERSION @"1106"

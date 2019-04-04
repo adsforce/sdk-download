@@ -94,7 +94,7 @@ If the in-app purchase uses the `google payment`, you can call the following met
  * @param purchaseData   Signature verification from GP payment, get from Purchase.getOriginalJson()，can not be empty
  * @param params         Other params，can be empty
  */
-AdsforceSdk.googlePayWithProductPrice(@NonNull String price, @NonNull String currency, @NonNull String publicKey, @NonNull String dataSignature, @NonNull String purchaseData, Map<String, String> params);
+AdsforceSdk.googleZFReportWithProductPrice(@NonNull String price, @NonNull String currency, @NonNull String publicKey, @NonNull String dataSignature, @NonNull String purchaseData, Map<String, String> params);
 ```
 
 > Note: This method must be called after initializing the SDK.
@@ -112,7 +112,7 @@ If the in-app purchase uses the `third-party payment`, you can call the followin
  * @param productId    Id of product，recommended to take from the 'productId' field of skudetail，can not be empty
  * @param productType  Type of product，recommended to take from the 'type' field of skudetail，can not be empty
  */
-AdsforceSdk.thirdPayWithProductPrice(@NonNull String price, @NonNull String currency, String productId, String productType);
+AdsforceSdk.thirdZFReportWithProductPrice(@NonNull String price, @NonNull String currency, String productId, String productType);
 ```
 
 > Note: This method must be called after initializing the SDK.
