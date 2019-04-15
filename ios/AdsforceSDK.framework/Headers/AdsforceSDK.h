@@ -30,7 +30,7 @@
              productCurrencyCode:(NSString *)productCurrencyCode
                receiptDataString:(NSString *)receiptDataString
                           pubkey:(NSString *)pubkey
-                          params:(NSDictionary *)params;
+                          params:(NSDictionary <NSString *,NSString *> *)params;
 
 + (void)thirdZFLogReportWithProductPrice:(NSNumber *)productPrice
                      productCurrencyCode:(NSString *)productCurrencyCode
@@ -38,8 +38,6 @@
                          productCategory:(NSString *)productCategory;
 
 #pragma mark - CustomEvent
-
-+ (void)enableCustomerEvent:(BOOL)enable;
 
 + (void)customEventWithKey:(NSString *)key stringValue:(NSString *)value;
 
