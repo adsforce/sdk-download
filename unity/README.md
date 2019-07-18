@@ -45,7 +45,7 @@ If the in-app purchase uses the google payment, you can call the following metho
 /**
  * In-app purchase record(Google-certified)
  *
- * @param price          Payment amount, recommended to take from the 'price' field of skudetail, can not be empty
+ * @param price          Payment amount, recommended to take from the 'price' field of skudetail, such as 6.0
  * @param currency       Payment currency，Payment amount, recommended to take from the 'price_currency_code' field of skudetail, can not be empty
  * @param publicKey      Public key of Google payment，can not be empty
  * @param dataSignature  Signature verification from GP payment, get from Purchase.getSignature()，can not be empty
@@ -53,7 +53,7 @@ If the in-app purchase uses the google payment, you can call the following metho
  * @param map            Other map, can be empty
  */
 
- AdsforceApi.googleZFReportWithProductPrice(string price, string currency, string publicKey, string dataSignature, string purchaseData, Dictionary<string, string> map)
+ AdsforceApi.googleZFReportWithProductPrice(double price, string currency, string publicKey, string dataSignature, string purchaseData, Dictionary<string, string> map)
 ```
 
 ### 4.2 About IAP for iOS
@@ -62,7 +62,7 @@ If the in-app purchase uses the appstore payment, you can call the following met
 /**
  * In-app purchase record(iOS)
  *
- * @param productPrice          such as 6.00
+ * @param productPrice          such as 6.0
 
  * @param productCurrencyCode   such as CNY
  * @param receiptDataString     such as your receipt data string
@@ -70,7 +70,7 @@ If the in-app purchase uses the appstore payment, you can call the following met
  * @param map                   Other map, can be empty
  */
 
-AdsforceApi.appStoreWithProductPrice(string productPrice, string productCurrencyCode, string receiptDataString, string pubkey, Dictionary<string, string> map)
+AdsforceApi.appStoreWithProductPrice(double productPrice, string productCurrencyCode, string receiptDataString, string pubkey, Dictionary<string, string> map)
 ```
 
 ### 4.3 About IAP for third-party
@@ -79,13 +79,13 @@ If the in-app purchase uses the third-party payment, you can call the following 
 /**
  * In-app purchase record(custom)
  *
- * @param price        Payment amount, recommended to take from the 'price' field of skudetail, can not be empty
+ * @param price        Payment amount, recommended to take from the 'price' field of skudetail, such as 6.0
  * @param currency     Payment currency，Payment amount, recommended to take from the 'price_currency_code' field of skudetail, can not be empty
  * @param productId    Id of product，recommended to take from the 'productId' field of skudetail，can not be empty
  * @param productType  Type of product，recommended to take from the 'type' field of skudetail，can not be empty
  */
 
- AdsforceApi.thirdZFReportWithProductPrice(string price, string currency, string productId, string productType)
+ AdsforceApi.thirdZFReportWithProductPrice(double price, string currency, string productId, string productType)
 ```
 
 ## 5. Tracking In-App Events
@@ -119,11 +119,11 @@ AdsforceSdk.customerEventWithList(string key, List<string> list);
 AdsforceSdk.customerEventWithMap(string key, Dictionary<string, string> dic);
 ```
 
-## 6. Tracking Deep Linking
-If you want to know the deeplink information , you can call the following code to get the user's deeplink information after initialization.
+## 6. Tracking One Linking
+If you want to know the onelink information , you can call the following code to get the user's onelink information after initialization.
 ```
-Action<AdsforceDeepLinkBean> callback = new Action<AdsforceDeepLinkBean> (deeplinkCallback);
-AdsforceApi.getDeepLink (callback);
+Action<string> callback = new Action<string> (onelinkCallback);
+AdsforceApi.getOneLink (callback);
 ```
 
 ## 7. Set AndroidId(only for android)
