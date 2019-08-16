@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AdsforceSDKVersion.h"
 #import "AdsforceDeeplinkModel.h"
+#import "AdsforceSDKTracker.h"
 
 @interface AdsforceSDK : NSObject
 
@@ -20,9 +21,9 @@
              channelId:(NSString *)channelId
                  appId:(NSString *)appId;
 
-#pragma mark - Deeplink
+#pragma mark - Onelink
 
-+ (void)getDeeplink:(void (^)(AdsforceDeeplinkModel *deeplinkModel))completionBlock;
++ (void)setOnelinkCallback:(void (^)(NSString *link))completionBlock;
 
 #pragma mark - IAP
 
@@ -54,5 +55,11 @@
 #pragma mark - CustomId
 
 + (void)setCustomId:(NSString *)cuid;
+
+#pragma mark - AutoLog
+
++ (void)setAutoLogAppEventsEnabled:(BOOL)enabled;
+
++ (void)setAutoLogIapPublicKey:(NSString *)publicKey;
 
 @end
